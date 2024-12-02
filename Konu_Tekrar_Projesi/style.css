@@ -1,0 +1,119 @@
+/* Genel Sayfa Düzeni */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Başlıkların Stilini Ayarlama */
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+/* Ürün Listesi */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+li {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #28a745;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+li a:hover {
+    background-color: #218838;
+}
+
+/* Sepet Bilgileri */
+h2 {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item a {
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.cart-item a:hover {
+    color: #c0392b;
+}
+
+/* Sepet Toplam Fiyat */
+h3 {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Genel Buton ve Bağlantı Stili */
+a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3498db;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+/* Sayfa Kenar Boşlukları */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
