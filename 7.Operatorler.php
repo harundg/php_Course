@@ -1,25 +1,24 @@
-<!-- Aritmetik Operatorler -->
+<!-- Aritmetik Operatörler -->
 <?php
-$num1=10;
-$num2=2;
+$num1 = 10;
+$num2 = 2;
 
-echo $num1. "**".$num2."=? <br>";
-echo "sonuç:".$num1**$num2 . "<br>";
+echo $num1 . "**" . $num2 . " = ? <br>";
+echo "Sonuç: " . $num1 ** $num2 . "<br>";
 ?>
 
 
-<!-- Atama Opertorler -->
+<!-- Atama Operatörler -->
 <?php
-$num1=10;
-$num2=2;
+$num1 = 10;
+$num2 = 2;
 
-$num1-=$num2;
-echo "sonuç=". $num1 ."<br>";
+$num1 -= $num2; // num1 = num1 - num2
+echo "Sonuç = " . $num1 . "<br>";
 ?>
 
 
-
-<!-- Karsilastirma Opertorleri -->
+<!-- Karşılaştırma Operatörleri -->
 <?php
 $a = 10;
 $b = 2;
@@ -39,7 +38,7 @@ echo "Eşit değil (!=): ";
 var_dump($a != $b); // Çıktı: bool(true)
 echo "<br>";
 
-// Eşit değil
+// Eşit değil (<>)
 echo "Eşit değil (<>): ";
 var_dump($a <> $b); // Çıktı: bool(true)
 echo "<br>";
@@ -55,9 +54,9 @@ var_dump($a < $b); // Çıktı: bool(false)
 echo "<br>";
 
 // Küçük veya eşittir
-echo "Küçük veya eşittir ); // Çıktı: bool(false)
-
-var_dump($a <= $b);
+echo "Küçük veya eşittir (<=): ";
+var_dump($a <= $b); // Çıktı: bool(false)
+echo "<br>";
 
 // Büyüktür
 echo "Büyüktür (>): ";
@@ -73,111 +72,84 @@ echo "<br>";
 echo "Uzay gemisi (<=>): ";
 var_dump($a <=> $b); // Çıktı: int(1) (a > b olduğu için 1 döner)
 echo "<br>";
-
-// Mantıksal NOT operatörü
-echo "Mantıksal NOT (!): ";
-var_dump($a != !$b); // Çıktı: bool(true)
-echo "<br>";
-
 ?>
 
 
-<!-- Artirma ve Eksiltme Operatorleri -->
+<!-- Artırma ve Eksiltme Operatörleri -->
 <?php
-
 $num = 10;
-$num; //
 
-echo "Artırılmış sayı: ". $num. "<br>";
+// Artırma işlemi
+$num++; // num = num + 1
+echo "Artırılmış sayı: " . $num . "<br>";
 ?>
 
 
-
-<!-- Mantiksal Operatorler -->
+<!-- Mantıksal Operatörler -->
 <?php
-// Mantıksal "ve" operatörü (AND, &&)
-// Her iki koşul doğruysa true döner
 $a = true;
 $b = false;
+
+// Mantıksal "ve" operatörü (AND, &&)
 echo "AND (&&) sonucu: ";
 var_dump($a && $b); // Çıktı: bool(false)
-
-echo "<br>AND (and) sonucu: ";
-var_dump($a and $b); // Çıktı: bool(false)
+echo "<br>";
 
 // Mantıksal "veya" operatörü (OR, ||)
-// En az bir koşul doğruysa true döner
-echo "<br>OR (||) sonucu: ";
+echo "OR (||) sonucu: ";
 var_dump($a || $b); // Çıktı: bool(true)
-
-echo "<br>OR (or) sonucu: ";
-var_dump($a or $b); // Çıktı: bool(true)
+echo "<br>";
 
 // Mantıksal "değil" operatörü (!)
-// Koşulun tersini alır (true -> false, false -> true)
-echo "<br>NOT (!) sonucu: ";
+echo "NOT (!) sonucu: ";
 var_dump(!$a); // Çıktı: bool(false)
+echo "<br>";
 
 // Mantıksal "XOR" operatörü (XOR)
-// Sadece bir koşul doğruysa true döner, ikisi de doğru veya ikisi de yanlışsa false
-echo "<br>XOR sonucu: ";
+echo "XOR sonucu: ";
 var_dump($a xor $b); // Çıktı: bool(true)
-"<br>"
+echo "<br>";
 ?>
 
 
-
-<!-- String Operatorleri -->
+<!-- String Operatörleri -->
 <?php
-$name="hakan ";
-$surname="mutlu ";
+$name = "Hakan ";
+$surname = "Mutlu";
 
-$name.=$surname;
-echo $name."student";
+// Birleştirme operatörü (.)
+$name .= $surname;
+echo $name . "student";
 ?>
 
 
-
-<!-- İf Else operatörü -->
-
+<!-- If-Else Yapısı -->
 <?php
-$number = -         1;
+$number = -1;
 
 // if yapısı
 if ($number > 0) {
-    echo "Sayı pozitiftir.<br>"; // Eğer $number 0'dan büyükse bu çalışır
-} 
-
-// else yapısı
-else {
-    echo "Sayı negatif ya da sıfırdır.<br>"; // Eğer $number 0'dan küçük ya da eşitse bu çalışır
+    echo "Sayı pozitiftir.<br>";
+} else {
+    echo "Sayı negatif ya da sıfırdır.<br>";
 }
 
 // if-else-if yapısı
 if ($number > 20) {
     echo "Sayı 20'den büyüktür.<br>";
 } elseif ($number == 10) {
-    echo "Sayı 10'dur.<br>"; // Eğer $number 10'a eşitse bu çalışır
+    echo "Sayı 10'dur.<br>";
 } else {
     echo "Sayı 10'dan küçüktür.<br>";
 }
 
+// Kısa if-else kullanımı
+$sayii = 10;
+echo $sayii == 10 ? "Sayı 10" : "Sayı 10 değil";
+echo "<br>";
 
-//Kısa İf Else Kullanımı
-$sayii=10;
-
-echo $sayii== 10 ? "sayi 10": "sayi 10 degil";      
-
-// if($sayii==10){
-//     echo  "sayi 10";
-// }else{
-//     echo "sayi 10 degil";
-// }
-
-
-
-$gun = 1    ;
-
+// Switch-case yapısı
+$gun = 1;
 switch ($gun) {
     case 1:
         echo "Pazartesi";
@@ -191,12 +163,4 @@ switch ($gun) {
     default:
         echo "Geçersiz gün";
 }
-
-
-
-
 ?>
-
-
-
-
