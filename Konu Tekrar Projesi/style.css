@@ -1,0 +1,42 @@
+/* Sayfa genel görünümü */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Liste elemanları */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin: 10px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    background: #007BFF;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+a:hover {
+    background: #0056b3;
+}
