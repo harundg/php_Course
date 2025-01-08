@@ -60,7 +60,39 @@ $b = fn($a) => "kisa" . $a . $c; // $a ve $c string olarak birleştiriliyor.
 echo $b(5); // Çıktı: "kisa510"
 
 
+//Class İçinde Fonksiyon
+// class ogrenci{
+//     public $isim;
+//     public $soyisim="bulut";
+//     public $yas=12;
+
+//     function goster(){
+//         echo $this->isim="hakan";
+//     }
+// }
+
+// $a= new ogrenci();
+
+// $a->goster();
 
 
+class Ogrenci{  
+    public $isim;
+    public $soyisim;
+    public $yas;
+
+    function tanit(){
+        echo "Benım adım {$this->isim} {$this->soyisim}, yaşım {$this->yas}.<br>";
+    }
+}
+
+$ogrenci1= new Ogrenci();
+$ogrenci1->isim = "Ahmet";
+$ogrenci1->soyisim = "Kaya";
+$ogrenci1->yas = 18;
+
+$ogrenci2= new Ogrenci();
+$ogrenci2->isim = "Elif";
+$ogrenci2
 
 ?>

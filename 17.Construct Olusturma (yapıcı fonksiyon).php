@@ -5,9 +5,9 @@ class ogrenci {
     public $soyisim;
     public $yas;
 
-    function __construct($isim, $soyisim, $yas) {
+    function __construct($isim, $soyad, $yas) {
         $this->isim = $isim;
-        $this->soyisim = $soyisim;
+        $this->soyisim = $soyad;
         $this->yas = $yas;
 
         echo "İsim: " . $this->isim . "<br/>Soyisim: " . $this->soyisim . "<br/>Yaş: " . $this->yas;
