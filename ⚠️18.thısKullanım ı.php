@@ -1,5 +1,5 @@
 <?php
-class orgrenci{
+class ogrenci{
     public $isim= "hakan";
     public $soyisim="yıldırım";
     public $yas=20;
