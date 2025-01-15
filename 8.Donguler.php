@@ -10,46 +10,58 @@ while ($a <= 10) {
     $a++;
 }
 
-//İç İçe While
-echo "<br/> İç İçe While <br/> ";
+
+
+// İç içe While döngüsü ile çarpım tablosu örneği
+echo "<br/> İç İçe While <br/>";
+
+// $a değişkenini 1 olarak başlatıyoruz (dış döngünün kontrol değişkeni)
 $a = 1;
+
+// $b değişkenini 1 olarak başlatıyoruz (iç döngünün kontrol değişkeni)
 $b = 1;
 
+// Dış döngü: $a değişkeni 1'den 10'a kadar çalışır
 while ($a <= 10) {
-    // echo $a . "";
 
+    // Dış döngüde $a'nın değerini yazdırıyoruz
+    echo $a . " ";
+
+    // İç döngü: $b değişkeni 1'den 10'a kadar çalışır
     while ($b <= 10) {
-        // echo "$a x $b = " . $a * $b . "";
-        echo $a . ' ' .  $b . " ";
-        echo "<br> <br/>";
-        $b++;
+        // Çarpım işlemini yazdırıyoruz (örnek: "1 x 1 = 1")
+        echo "$a x $b = " . $a * $b . " ";
+        $b++; // İç döngü kontrol değişkenini bir artırıyoruz
     }
 
+    // İç döngü bittiğinde $b değişkenini tekrar 1'e sıfırlıyoruz
+    // Bu, iç döngünün bir sonraki dış döngü için tekrar çalışmasını sağlar
     $b = 1;
+
+    // Dış döngü kontrol değişkenini bir artırıyoruz
     $a++;
 }
 
 
-
-//Do-While
+// While Döngüsü
 $a = 5;
-echo " While Döngüsü <br/> ";
-while ($a < 6) {
-    echo "sayı 6'dan küçük sayi=$a <br/>";
-    $a++;
+echo "</br>"."</br>"."While Döngüsü <br/>";
+while ($a < 6) { // $a başlangıçta 5, koşul doğru olduğu için döngü çalışır
+    echo "sayı 6'dan küçük sayi = $a <br/>";
+    $a++; // $a değeri artırılır (6 olur ve döngü sonlanır)
 }
-echo "sayı 6'dan büyük sayi=$a <br/> <br/>";
+echo "sayı 6'dan büyük sayi = $a <br/><br/>";
 
 
-
-
-$a = 10;
+// Do-While Döngüsü
+$a = 10; // $a değeri başlangıçta 10
 echo "Do While Döngüsü <br/>";
 do {
-    echo "sayı 6'dan küçük sayi=$a <br/>";
-    $a++;
-} while ($a < 6);
-echo "sayı 6'dan büyük sayi=$a <br/> ";
+    // Koşul kontrol edilmeden önce bu blok mutlaka bir kez çalışır
+    echo "sayı 6'dan küçük sayi = $a <br/>";
+    $a++; // $a artırılır
+} while ($a < 6); // Koşul kontrol edilir ($a başlangıçta 10 olduğu için yanlış)
+echo "sayı 6'dan büyük sayi = $a <br/>";
 
 //For
 
