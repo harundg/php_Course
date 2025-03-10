@@ -17,3 +17,5 @@ class ogrenci {
 // Nesne oluşturma
 $sinif = new ogrenci("Orhan", "Bayrak", 21);
 ?>
+
+

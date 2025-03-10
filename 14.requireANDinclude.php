@@ -11,9 +11,9 @@ echo "Bu satır çalışmaz çünkü require hata verdi.";
 
 
 
-include_once 'gonder.php'; // Dosya bir kez dahil edilir.
-include_once 'gonder.php'; // Tekrar çağrılsa bile eklenmez.
-require_once 'gonder.php'; // Dosya bir kez dahil edilir.Tekrar çağrılsa bile eklenmez.
+include_once 'veriAktarma.php'; // Dosya bir kez dahil edilir.
+include_once 'veriAktarma.php'; // Tekrar çağrılsa bile eklenmez.
+require_once 'veriAktarma.php'; // Dosya bir kez dahil edilir.Tekrar çağrılsa bile eklenmez.
 ?>
 
 

@@ -65,7 +65,7 @@
     </style>
 </head>
 <body>
-    <form action="veriAktarma.php" method="post" enctype="multipart/form-data">
+    <form action="/php_Course/13.veriAktarma.php" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="mail" class="form-label">Kullanıcı Mail:</label>
             <input type="email" class="form-control" id="mail" name="mail" placeholder="E-posta adresinizi giriniz">
