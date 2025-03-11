@@ -5,7 +5,7 @@
 echo "While <br/> ";
 $a = 0;
 
-while ($a <= 10) {
+while ($a <=  10) {
     echo "$a . merhaba <br/> ";
     $a++;
 }
@@ -13,7 +13,7 @@ while ($a <= 10) {
 
 
 // İç içe While döngüsü ile çarpım tablosu örneği
-echo "<br/> İç İçe While <br/>";
+echo "<br/> İç İçe While (Çarpım Tablosu)<br/>";
 
 // $a değişkenini 1 olarak başlatıyoruz (dış döngünün kontrol değişkeni)
 $a = 1;
@@ -30,7 +30,7 @@ while ($a <= 10) {
     // İç döngü: $b değişkeni 1'den 10'a kadar çalışır
     while ($b <= 10) {
         // Çarpım işlemini yazdırıyoruz (örnek: "1 x 1 = 1")
-        echo "$a x $b = " . $a * $b . " ";
+        echo "$a x $b = " . $a * $b . " "."<br>";
         $b++; // İç döngü kontrol değişkenini bir artırıyoruz
     }
 
