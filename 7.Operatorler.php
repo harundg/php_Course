@@ -84,7 +84,7 @@ echo "Artırılmış sayı: " . $num . "<br><br>";
 <!-- Mantıksal Operatörler -->
 <?php
 $a = true;
-$b = false;
+$b = true;
 
 // Mantıksal "ve" operatörü (AND, &&)
 echo "AND (&&) sonucu: ";
@@ -156,4 +156,12 @@ switch ($gun) {
     default:
         echo "Geçersiz gün<br><br>";
 }
+
+
+echo "Konu Tekrar:"."<br>";
+$s1=6;
+$s2='6';
+
+var_dump($s1 =! $s2);
+
 ?>
