@@ -9,8 +9,11 @@ while ($a <=  10) {
     echo "$a . merhaba <br/> ";
     $a++;
 }
+$b=0;
 
-
+while($b<=0){
+    $b++;
+}
 
 // İç içe While döngüsü ile çarpım tablosu örneği
 echo "<br/> İç İçe While (Çarpım Tablosu)<br/>";
