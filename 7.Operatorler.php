@@ -13,7 +13,8 @@ echo "Sonuç: " . $num1 ** $num2 . "<br>";
 $num1 = 10;
 $num2 = 2;
 
-$num1 -= $num2; // num1 = num1 - num2
+$num1 += $num2; // num1 = num1 + num2
+//" +=" işlemi toplamayı ve sonucu aynı değişkene atamayı sağlar.
 echo "Sonuç = " . $num1 . "<br>";
 ?>
 

@@ -10,6 +10,10 @@ if ($mail && $pass) {
     echo "Lütfen tüm alanları doldurun.<br><br>";
 }
 
+
+
+
+
 // Dosya yükleme işlemzi
 if (isset($_FILES["file"]) && $_FILES["file"]["error"] == 0) {
     $file = $_FILES["file"];
