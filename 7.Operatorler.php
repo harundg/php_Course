@@ -82,6 +82,8 @@ echo "Artırılmış sayı: " . $num . "<br><br>";
 ?>
 
 <!-- Mantıksal Operatörler -->
+
+
 <?php
 $a = true;
 $b = true;
@@ -158,10 +160,26 @@ switch ($gun) {
 }
 
 
-echo "Konu Tekrar:"."<br>";
-$s1=6;
-$s2='6';
 
-var_dump($s1 =! $s2);
+
+echo "Konu Tekrar:" . "<br>";
+$s1 = 6;
+$s2 = '6';
+
+var_dump($s1 = ! $s2);
+
+
+$şehir=0;
+switch($şehir){
+case 1:
+    echo"izmir";
+    break;
+    case 2:
+        echo"bursa";
+        break;
+        default:
+        echo"Geçersiz şehir";
+
+}
 
 ?>
