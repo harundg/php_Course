@@ -9,9 +9,12 @@ while ($a <=  10) {
     echo "$a . merhaba <br/> ";
     $a++;
 }
+
+
 $b=0;
 
-while($b<=0){
+while($b<=10){
+    echo $b;
     $b++;
 }
 
@@ -33,41 +36,44 @@ while ($a <= 10) {
     // İç döngü: $b değişkeni 1'den 10'a kadar çalışır
     while ($b <= 10) {
         // Çarpım işlemini yazdırıyoruz (örnek: "1 x 1 = 1")
-        echo "$a x $b = " . $a * $b . " "."<br>";
+        echo "$a x $b = " . $a * $b . " || ";
         $b++; // İç döngü kontrol değişkenini bir artırıyoruz
     }
 
     // İç döngü bittiğinde $b değişkenini tekrar 1'e sıfırlıyoruz
     // Bu, iç döngünün bir sonraki dış döngü için tekrar çalışmasını sağlar
     $b = 1;
-
+echo"<br>";
     // Dış döngü kontrol değişkenini bir artırıyoruz
     $a++;
 }
 
 
+
+
 // While Döngüsü
-$a = 5;
+$a = 10;
 echo "</br>"."</br>"."While Döngüsü <br/>";
-while ($a < 6) { // $a başlangıçta 5, koşul doğru olduğu için döngü çalışır
+while ($a < 6) { 
     echo "sayı 6'dan küçük sayi = $a <br/>";
-    $a++; // $a değeri artırılır (6 olur ve döngü sonlanır)
+    $a++; 
 }
 echo "sayı 6'dan büyük sayi = $a <br/><br/>";
 
 
 // Do-While Döngüsü
-$a = 10; // $a değeri başlangıçta 10
+$a = 10; 
 echo "Do While Döngüsü <br/>";
 do {
-    // Koşul kontrol edilmeden önce bu blok mutlaka bir kez çalışır
+   
     echo "sayı 6'dan küçük sayi = $a <br/>";
-    $a++; // $a artırılır
-} while ($a < 6); // Koşul kontrol edilir ($a başlangıçta 10 olduğu için yanlış)
+    $a++;  
+} while ($a < 6); 
 echo "sayı 6'dan büyük sayi = $a <br/>";
 
-//For
 
+
+//For
 echo "<br/> For Döngüsü <br/>";
 for ($a = 0; $a <= 10; $a++) {
     echo "sayı=$a <br/>";
