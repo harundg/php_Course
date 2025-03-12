@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <style>
-body{
-    background-color: black;
-    color: aliceblue
-}
-        
+        body {
+            background-color: black;
+            color: aliceblue
+        }
     </style>
 </body>
+
 </html>
 
 <?php
@@ -27,10 +29,18 @@ while ($a <=  10) {
     echo "$a . Merhaba <br/> ";
     $a++;
 }
-
-
-
 echo "<br>";
+
+echo "While Tekrar <br/> ";
+$bir = 0;
+
+while ($bir < 10) {
+    echo "$bir <br>";
+    $bir++;
+}
+echo "<br>";
+
+
 
 // İç içe While döngüsü ile çarpım tablosu örneği
 echo "<br/> İç İçe While (Çarpım Tablosu)<br/>";
@@ -61,13 +71,28 @@ while ($a <= 10) {
     // Dış döngü kontrol değişkenini bir artırıyoruz
     $a++;
 }
+echo "<br>";
+echo "<br>";
 
 
 
-
+echo "While ve Do-While Farkı";
 // While Döngüsü
+
+$x = 5;
+
+while ($x < 3) { // Koşul baştan yanlış olduğu için döngü hiç çalışmaz
+    echo "x = $x <br/>";
+    $x++;
+}
+
+echo "While bitti, x = $x <br/>";
+
+
+
+
 $a = 10;
-echo "</br>" . "</br>" . "While Döngüsü <br/>";
+echo "</br>" . "</br>" . "While Döngüsü: Önce şart kontrol edilir, sonra döngü çalışır. <br/>";
 while ($a < 6) {
     echo "sayı 6'dan küçük sayi = $a <br/>";
     $a++;
@@ -77,7 +102,7 @@ echo "sayı 6'dan büyük sayi = $a <br/><br/>";
 
 // Do-While Döngüsü
 $a = 10;
-echo "Do While Döngüsü <br/>";
+echo "Do-While Döngüsü: Önce döngü çalışır, sonra koşulu kontrol eder. <br/>";
 do {
 
     echo "sayı 6'dan küçük sayi = $a <br/>";
@@ -85,6 +110,7 @@ do {
 } while ($a < 6);
 echo "sayı 6'dan büyük sayi = $a <br/>";
 
+echo "<br>";
 
 
 //For
@@ -92,6 +118,7 @@ echo "<br/> For Döngüsü <br/>";
 for ($a = 0; $a <= 10; $a++) {
     echo "sayı=$a <br/>";
 }
+echo "<br>";
 
 echo "<br/> Break ile For Döngüsü <br/>";
 for ($a = 0; $a <= 10; $a++) {
@@ -101,6 +128,7 @@ for ($a = 0; $a <= 10; $a++) {
         break; // Döngüyü sonlandır
     }
 }
+echo "<br>";
 
 
 
@@ -110,6 +138,7 @@ $name = ["ahmet", "mehemt", "arda", "can", "cancan", "kadr", "besr", "harn"];
 for ($a = 0; $a < count($name); $a++) {
     echo "name=$name[$a] <br/> ";
 }
+echo "<br>";
 
 
 echo "<br/> İç İçe For Döngüsü <br/>";
@@ -123,21 +152,20 @@ for ($a = 1; $a <= 10; $a++) {
 
     echo "<br/><br/>  ";
 }
+echo "<br>";
+
 
 
 echo "<br/> İç İçe Foreach Döngüsü <br/>";
-
 $name = ["Ahmet", "Mehmet", "Ayşe"];
 foreach ($name as $deger) {
     echo "isim = $deger <br>";
 }
+echo "<br>";
 
 
 echo "<br/> Break ve Continue Kullanımı <br/>";
-
-
 echo "<br/>Break Kullanımı: <br/>";
-
 $x = 0;
 while ($x < 10) {
     if ($x == 5) {
@@ -147,6 +175,8 @@ while ($x < 10) {
     echo "$x" . "<br>";
     $x++;
 }
+echo "<br>";
+
 
 
 echo "<br/> Diziler ile Break Kullanımı: <br/>";
@@ -154,7 +184,7 @@ $isim = ["Ahmet", "Mehmet", "Ayşe", "Serkan"];
 $a = 0;
 while ($a < count($isim)) {
     if (($name)[$a] == "Ayşe") {
-        echo "Invalid name writed. <br/>";
+        echo "Invalid name writed. Loop over. <br/>";
         break;
     }
     echo "$isim[$a]" . "<br>";
