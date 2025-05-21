@@ -11,7 +11,7 @@
     <style>
         body {
             background-color: black;
-            color: aliceblue
+            color: white;
         }
     </style>
 </body>
@@ -98,7 +98,7 @@ while ($a < 6) {
     $a++;
 }
 echo "sayı 6'dan büyük sayi = $a <br/><br/>";
-
+//çıktı: 10
 
 // Do-While Döngüsü
 $a = 10;
@@ -109,6 +109,7 @@ do {
     $a++;
 } while ($a < 6);
 echo "sayı 6'dan büyük sayi = $a <br/>";
+
 
 echo "<br>";
 
@@ -172,6 +173,7 @@ while ($x < 10) {
         echo "Invalid number writed. Loop over. <br/>";
         break;
     }
+    
     echo "$x" . "<br>";
     $x++;
 }
@@ -222,4 +224,12 @@ while ($r < count($isim)) {
     }
     echo "$isim[$r]" . "<br>";
     $r++;
+}
+echo "<br>";
+
+
+$w=0;
+while($w<10){
+    echo $w;
+    $w++;
 }

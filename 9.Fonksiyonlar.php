@@ -69,7 +69,7 @@
 // //     function goster(){
 // //         echo $this->isim="hakan";
 // //     }
-// // }
+// // } 
 
 // // $a= new ogrenci();
 
