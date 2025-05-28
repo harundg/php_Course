@@ -17,7 +17,28 @@ function name(){
     return "John Doe";
 }
 echo(name()); 
+echo "<br>";
 
+
+
+function puanKontrol($puan){
+if($puan<50){
+    return "kaldı";
+}
+    if($puan>=50 && $puan<70){
+    return "geçer";
+  }
+
+   if($puan>=70 && $puan<90){
+    return "iyi";
+} 
+  
+
+    return "Pekiyi";
+
+}
+$puanc=puanKontrol(90);
+echo "Puanımız: $puanc";
 
 
 

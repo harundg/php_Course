@@ -114,6 +114,28 @@
     $book->bookPageInfo();
 
 
+
+    class user{
+public $isim="Harun";
+
+public $yas=18;
+
+
+function info(){
+    echo "İsim: $this->isim";
+    echo "Yas: $this->yas";
+
+    if($this->yas<18){
+        echo"Çocuk";
+    } 
+    else{
+        echo "Yetişkin";
+    }
+}
+
+    }
+    $user = new user();
+    $user->info();
     ?>
 
 

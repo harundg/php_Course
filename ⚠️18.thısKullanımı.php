@@ -14,4 +14,5 @@ $isim= "ayse";
 }
 
 $yaz = new ogrenci();
+
 ?>

@@ -134,7 +134,7 @@ $Total+=$array;
 
 }
 echo "Sonuc: $Total";
-
+echo "<br>";                
 
 
 $x = 0;
@@ -143,12 +143,21 @@ while ($x < 6) {
     echo $x . " ";
     $x += 2;
 }
-
+echo "<br>";
 
 $sayi = 3;
 
-if ($sayi = 7) {
+if ($sayi == 7) {
     echo "Burası çalışır mı?";
+}
+echo "<br>";
+
+
+for($nu=0;$nu<=20;$nu++){
+if($nu/3 && $nu/5){
+echo $nu;   
+
+}
 }
 
 

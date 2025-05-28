@@ -32,3 +32,15 @@ function writeScore()
 $deger=writeScore();
 echo "Fun İçinde Yerel Sayı: ".$deger+10;
 
+
+$puan = 92;
+
+function puanYaz(){
+global $puan;
+echo "Your puan: $puan";
+
+
+
+}         
+puanYaz();
+echo "Fun dışı $puan";

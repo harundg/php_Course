@@ -20,7 +20,7 @@
 // Ortalama fonksiyonu
 echo "<h3>Fonksiyon ile Ortalama Hesaplama </h3>";
 function ortalamal($s1, $s2){
-    return ($s1 + $s2) / 2;
+    return ($s1 + $s2) / 2;     
 }
 echo ortalamal(10, 20);
 echo "<br>";
@@ -59,6 +59,31 @@ selam();   // sadece Merhaba yazar
 echo "<br>";
 
 
+//Arrow Function
+$kare= fn($x)=> $x * $x;
+echo $kare(4);
+echo "<br>";
+
+
+$yaribulma= fn($c) =>$c/2;
+echo $yaribulma(10);
+echo "<br>";
+
+$puanYorum= fn($p)=> $p >= 50 ? "Geçti":"Kaldı";
+echo $puanYorum(50);
+echo "<br>";
+
+$indirimlifiyat = fn($f) => $f - ($f * 0.20);
+echo $indirimlifiyat(100);
+echo "<br>";
+
+
+$urunBilgi= fn($fiyat) => "Orjinal Fiyat: $fiyat TL - İndirim:".($fiyat * 0.20)." TL - İndirimli Fiyat:".($fiyat -($fiyat * 0.20))." TL";
+echo $urunBilgi(200);
+echo "<br>"; 
+
+    
+
 
 //Recursive Fonksiyon
 echo "<h3>Recursive Fonksiyon</h3>";
@@ -69,9 +94,9 @@ function say($a){
     if($a<10){
         return say($a +1);
     }
-}
+    }
 
-say(1);
+    say(1);
 
 
 // Fonksiyonla Ortalama Hesaplama (Parametreli + Return)
@@ -88,8 +113,31 @@ $z= function($bir, $iki, $uc) use ($y){
 echo "Merhaba $bir $iki $uc $y";
 };
 $z("gunaydin","iyiaksamlar","iyisabahlar");
+echo "<br>";
 
 
+
+
+function notDurumu($not){
+if($not>=85){
+echo"Pekiyi";
+}
+
+if($not>=70 & $not<=85 ){
+echo"iyi";
+
+}
+if($not>=50 & $not<=69 ){
+echo"Orta";
+
+}
+
+if($not<50 ){
+echo"Kaldı";
+
+}
+}
+echo notDurumu(70);
 ?>
 
 
