@@ -1,131 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+
+    body{
+    
+        
+        color: whitesmoke;
+        font-size:17px;
+    }
+</style>
 <?php
 
-// $a = 1;
-// if($a==1){
-//     deneme(25,5);
-//     deneme(10,5);
-//     deneme(10,30);
-// }
-
-// function deneme($a , $b){
-// echo "Hello World! ";
-// echo $a*$b . "<br/>";
-
-// echo "---------------------------- <br/><br/>";
-// }
+// Ortalama fonksiyonu
+echo "<h3>Fonksiyon ile Ortalama Hesaplama </h3>";
+function ortalamal($s1, $s2){
+    return ($s1 + $s2) / 2;     
+}
+echo ortalamal(10, 20);
+echo "<br>";
 
 
-// //Parametreli Fonksiyonlar
-//     topla(20,41);
-//     carp(5,6);
 
 
-//     function topla($x, $y){
-//         echo  "toplam = ".$x+$y . "<br/>";
-//         echo "---------------------------- <br/>";
-//     }
-//     function carp($x, $y){
-//         echo "çarpma = ".($x*$y) . "<br/>";
-//         echo "---------------------------- <br/>"; 
-//     }
-
-
-//     //Anonymus Fonsıyonlar
-
-//     $b="hakan";
-//     $a=function($isim) use($b){
-
-//         echo "merhaba $isim"."".$b."<br/>";
-//     };
-
-//     $a("mert");
-
-        
-    
-
-// //Arrow Function
-// function name(){
-//     return "hello!"; 
-// }
-    
-// $a= function(){
-//     echo "Merhaba!";
-// };
-
-// echo $a();
-
-// $c = 10;
-// $b = fn($a) => "kisa" . $a . $c; // $a ve $c string olarak birleştiriliyor.
-
-// echo $b(5)."<br>"; // Çıktı: "kisa510"
-
-
-// //Class İçinde Fonksiyon
-// // class ogrenci{
-// //     public $isim;
-// //     public $soyisim="bulut";
-// //     public $yas=12;
-
-// //     function goster(){
-// //         echo $this->isim="hakan";
-// //     }
-// // } 
-
-// // $a= new ogrenci();
-
-// // $a->goster();
-
-
-// class Ogrenci {
-//     public $isim;
-//     public $soyisim;
-//     public $yas;
-//     public $dersler = [];
-
-//     function tanit() {
-//         echo "Benim adım {$this->isim} {$this->soyisim}, yaşım {$this->yas}.<br>";
-//     }
-
-//     function dersEkle($dersadi, $not) {
-//         $this->dersler[$dersadi] = $not;
-//         echo "{$dersadi} dersi eklendi, not: {$not}.<br>";
-//     }
-
-//     function ortalamaHesapla() {
-//         $toplam = array_sum($this->dersler);
-//         $dersSayisi = count($this->dersler);
-//         $ortalama = $dersSayisi > 0 ? $toplam / $dersSayisi : 0; // Doğru mantık kontrolü
-//         echo "Not Ortalamam: {$ortalama}.<br>";
-//     }
-// }
-
-// // Sınıfın dışına geçiyoruz
-// $ogrenci = new Ogrenci();
-// $ogrenci->isim = "Ahmet";
-// $ogrenci->soyisim = "Kaya";
-// $ogrenci->yas = 18;
-
-// $ogrenci->tanit();
-// $ogrenci->dersEkle("Matematik", 85);
-// $ogrenci->dersEkle("Türkçe", 90);
-// $ogrenci->ortalamaHesapla();
-
-//Class içinde fonksiyon
- 
-class ogrenci{
-    public $isim;
-    public $soyisim="bulut";
-    public $yas=12;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-    function goster($deger){
-        echo $this->isim=$deger;
-        return 10;
+// İç içe fonksiyon tanımı
+echo "<h3>İç İçe Fonksiyon Tanımı</h3>";
+function selam() {
+    echo "Merhaba";
+    function gizli() {
+        echo " - Gizli fonksiyon!";
     }
+}
+selam();   // sadece Merhaba yazar
+// gizli(); // çalıştırılmazsa hata verir çünkü ancak selam() çağrıldıktan sonra tanımlanır
+echo "<br>";
+
+
+
+
+//Arrow Function
+$kare= fn($x)=> $x * $x;
+echo $kare(4);
+echo "<br>";
+
+$yaskontrolu= fn($yasi)=>$yasi <19 ? "Çocuk":"Yetişkin";
+echo $yaskontrolu(18);
+echo "<br>";
+
+$yaribulma= fn($c) =>$c/2;
+echo $yaribulma(10);
+echo "<br>";
+
+$puanYorum= fn($p)=> $p >= 50 ? "Geçti":"Kaldı";
+echo $puanYorum(50);
+echo "<br>";
+
+$indirimlifiyat = fn($f) => $f - ($f * 0.20);
+echo $indirimlifiyat(100);
+echo "<br>";
+
+$yascontrol= fn($yaass)=> $yaass >=18 ? "Reşit":"Reşit Değil";
+echo $yascontrol(10);
+echo "<br>";
+
+$urunBilgi= fn($fiyat) => "Orjinal Fiyat: $fiyat TL - İndirim:".($fiyat * 0.20)." TL - İndirimli Fiyat:".($fiyat -($fiyat * 0.20))." TL";
+echo $urunBilgi(200);
+echo "<br>"; 
+    
+$yasas= fn($yascik)=> $yascik>=18 ? "tamam":"Yok";
+echo $yasas(10);
+echo "<br>";    
+
+$tekrar1= fn($studentNote)=> $studentNote >= 85 ? "AA" :
+($studentNote>=70?"BB":
+($studentNote>=50?"CC":"FF"));
+echo $tekrar1(49);
+echo "<br>";
+
+$bmiYorum = fn($kilo, $boy) =>
+   $kilo/($boy*$boy)>=30?"Obez":
+   ($kilo/($boy*$boy)>=25?"Fazla Kilolu":($kilo/($boy*$boy)>=18.5?"Normal":"Zayıf"));
+echo $bmiYorum(64.90,1.73);
+
+
+
+//Recursive Fonksiyon
+echo "<h3>Recursive Fonksiyon</h3>";
+function say($a){
+
+    echo $a."<br/>";
+
+    if($a<10){
+        return say($a +1);
+    }
+    }
+
+    say(1);
+
+
+// Fonksiyonla Ortalama Hesaplama (Parametreli + Return)
+function tekrarort($s1,$s2){
+    return ($s1+$s2)/2;
+}
+echo tekrarort(10,20);
+echo "<br>";
+
+
+//Anonymus Fonksiyon(İsimsiz Fonskiyon)
+$y="Harun";
+$z= function($bir, $iki, $uc) use ($y){
+echo "Merhaba $bir $iki $uc $y";
+};
+$z("gunaydin","iyiaksamlar","iyisabahlar");
+echo "<br>";
+
+
+
+
+//Class İçinde Fonksiyon
+   class app
+    {
+        public $name = "Harun";
+        public $age = 17;
+        function infopreview()
+        {
+            if ($this->age < 18) {
+                echo "Name=$this->name, Adult or child? Children";
+            } else {
+                echo "Name=$this->name, Adult or child? Adult";
+            }
+        }
+    }
+    $app = new app();
+    $app->infopreview();
+    echo "<br>";
+    echo "<br>";
+
+
+    class book
+    {
+        public $bookName = "Harry Potter";
+        public $numberOfPages = 303;
+
+        function bookPageInfo()
+        {
+            echo "Book Name:$this->bookName" . "<br>";
+            echo "Number Of Page: $this->numberOfPages" . "<br>";
+            if ($this->numberOfPages > 300) {
+                echo "Status: Long Book" . "<br>";
+            } else {
+                echo "Status: Short Book" . "<br>";
+            }
+        }
+    }
+    $book = new book();
+    $book->bookPageInfo();
+
+
+
+    class user{
+public $isim="Harun";
+
+public $yas=18;
+
+
+function info(){
+    echo "İsim: $this->isim";
+    echo "Yas: $this->yas";
+
+    if($this->yas<18){
+        echo"Çocuk";
+    } 
+    else{
+        echo "Yetişkin";
+    }
+}
+
+    }
+    $user = new user();
+    $user->info();
+    
+
+  
+
+
+
+//İf İle Fonksiyon
+function notDurumu($not){
+if($not>=85){
+echo"Pekiyi";
+}
+
+if($not>=70 & $not<=85 ){
+echo"iyi";
+
+}
+if($not>=50 & $not<=69 ){
+echo"Orta";
 
 }
 
+if($not<50 ){
+echo"Kaldı";
 
-$a= new ogrenci();
-$a->goster("ayse");
-
+}
+}
+echo notDurumu(70);
 ?>
+
+
+</body>
+</html>
