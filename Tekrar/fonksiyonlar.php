@@ -64,6 +64,12 @@ $kare= fn($x)=> $x * $x;
 echo $kare(4);
 echo "<br>";
 
+$yaskontrolu= fn($yasi)=>$yasi <19 ? "Çocuk":"Yetişkin";
+echo $yaskontrolu(18);
+echo "<br>";
+
+
+
 
 $yaribulma= fn($c) =>$c/2;
 echo $yaribulma(10);
@@ -77,13 +83,30 @@ $indirimlifiyat = fn($f) => $f - ($f * 0.20);
 echo $indirimlifiyat(100);
 echo "<br>";
 
+$yascontrol= fn($yaass)=> $yaass >=18 ? "Reşit":"Reşit Değil";
+echo $yascontrol(10);
+echo "<br>";
 
 $urunBilgi= fn($fiyat) => "Orjinal Fiyat: $fiyat TL - İndirim:".($fiyat * 0.20)." TL - İndirimli Fiyat:".($fiyat -($fiyat * 0.20))." TL";
 echo $urunBilgi(200);
 echo "<br>"; 
 
     
+$yasas= fn($yascik)=> $yascik>=18 ? "tamam":"Yok";
+echo $yasas(10);
+echo "<br>";    
 
+
+$tekrar1= fn($studentNote)=> $studentNote >= 85 ? "AA" :
+($studentNote>=70?"BB":
+($studentNote>=50?"CC":"FF"));
+echo $tekrar1(49);
+echo "<br>";
+
+$bmiYorum = fn($kilo, $boy) =>
+   $kilo/($boy*$boy)>=30?"Obez":
+   ($kilo/($boy*$boy)>=25?"Fazla Kilolu":($kilo/($boy*$boy)>=18.5?"Normal":"Zayıf"));
+echo $bmiYorum(64.90,1.73);
 
 //Recursive Fonksiyon
 echo "<h3>Recursive Fonksiyon</h3>";
